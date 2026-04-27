@@ -1,0 +1,15 @@
+[
+  {
+    "requestId": "R0001",
+    "createdAt": "2026-04-27T06:25:56.108Z",
+    "serviceCategory": "Plumbing",
+    "postcode": "SW1A 1AA",
+    "budgetMin": 80,
+    "budgetMax": 140,
+    "urgency": "Immediate (same day)",
+    "contactMethod": "WhatsApp",
+    "contactNumber": "+447700001111",
+    "problemDescription": "Leaking tap",
+    "status": "matched"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "providerId": "P001",
+    "providerName": "QuickFix Plumbing",
+    "serviceCategory": "Plumbing",
+    "locationCoverage": "SW1,SW3,W1",
+    "priceMin": 70,
+    "priceMax": 130,
+    "availability": "Same day",
+    "rating": 4.7,
+    "contactPhone": "+447700000001"
+  },
+  {
+    "providerId": "P002",
+    "providerName": "Prime Plumb London",
+    "serviceCategory": "Plumbing",
+    "locationCoverage": "SW1,SE1",
+    "priceMin": 90,
+    "priceMax": 150,
+    "availability": "Within 24 hours",
+    "rating": 4.5,
+    "contactPhone": "+447700000004"
+  },
+  {
+    "providerId": "P003",
+    "providerName": "CitySpark Electrical",
+    "serviceCategory": "Electrical",
+    "locationCoverage": "E1,E2,N1",
+    "priceMin": 75,
+    "priceMax": 170,
+    "availability": "Within 24 hours",
+    "rating": 4.6,
+    "contactPhone": "+447700000002"
+  },
+  {
+    "providerId": "P004",
+    "providerName": "BrightHome Cleaning",
+    "serviceCategory": "Cleaning",
+    "locationCoverage": "SE1,SE5,SW2",
+    "priceMin": 45,
+    "priceMax": 90,
+    "availability": "Same day",
+    "rating": 4.6,
+    "contactPhone": "+447700000003"
+  }
+]
