@@ -167,3 +167,14 @@ bash scripts/resolve_pr_conflicts.sh
 ```
 
 This script keeps the hyperlocal MVP implementation from this branch for those files and stages them.
+
+
+### Sanity check for unresolved merge markers
+
+Before committing, run:
+
+```bash
+bash scripts/check_no_conflict_markers.sh
+```
+
+This blocks accidental commits containing strings like `<<<<<<<`, `=======`, and `>>>>>>>`.
