@@ -177,4 +177,4 @@ Before committing, run:
 bash scripts/check_no_conflict_markers.sh
 ```
 
-This blocks accidental commits containing strings like `<<<<<<<`, `=======`, and `>>>>>>>`.
+This blocks accidental commits containing unresolved merge delimiters or branch-marker leftovers.
