@@ -1,0 +1,2 @@
+request_id,timestamp,service_category,postcode,budget_min,budget_max,urgency,contact_method,contact_number,problem_description,status
+R001,2026-04-27T09:00:00Z,Plumbing,SW1A 1AA,80,150,Immediate (same day),WhatsApp,+447700001111,Leaking kitchen tap,new

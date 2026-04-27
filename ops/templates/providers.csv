@@ -1,0 +1,4 @@
+provider_id,provider_name,service_category,location_coverage,price_min,price_max,availability,contact_name,contact_phone,rating,verified,last_updated
+P001,QuickFix Plumbing,Plumbing,"SW1,SW3,W1",60,120,Same day,Ali Khan,+447700000001,4.7,Yes,2026-04-27
+P002,CitySpark Electrical,Electrical,"E1,E2,N1",70,160,Within 24 hours,Sarah Bell,+447700000002,4.5,Yes,2026-04-27
+P003,BrightHome Cleaning,Cleaning,"SE1,SE5,SW2",45,90,Same day,Emma Reed,+447700000003,4.6,No,2026-04-27
