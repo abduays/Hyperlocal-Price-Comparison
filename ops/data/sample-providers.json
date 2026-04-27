@@ -1,0 +1,32 @@
+[
+  {
+    "providerId": "P001",
+    "providerName": "QuickFix Plumbing",
+    "serviceCategory": "Plumbing",
+    "locationCoverage": "SW1,SW3,W1",
+    "priceMin": 70,
+    "priceMax": 130,
+    "availability": "Same day",
+    "rating": 4.7
+  },
+  {
+    "providerId": "P004",
+    "providerName": "Prime Plumb London",
+    "serviceCategory": "Plumbing",
+    "locationCoverage": "SW1,SE1",
+    "priceMin": 90,
+    "priceMax": 150,
+    "availability": "Within 24 hours",
+    "rating": 4.5
+  },
+  {
+    "providerId": "P010",
+    "providerName": "Budget Plumbers",
+    "serviceCategory": "Plumbing",
+    "locationCoverage": "N1,N5",
+    "priceMin": 50,
+    "priceMax": 100,
+    "availability": "Same day",
+    "rating": 3.8
+  }
+]
