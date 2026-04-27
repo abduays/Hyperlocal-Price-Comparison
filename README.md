@@ -109,3 +109,46 @@ Keep focus on real booked jobs and unit economics before scaling product complex
 - `frontend/` static form prototype (Google Form-compatible fields)
 - `backend/` lightweight matching engine helper
 - `ops/` operating instructions, templates, scripts, and sample data
+<<<<<<< codex/build-hyperlocal-service-matching-tool
+
+## GitHub Pages deployment
+
+To make this show as a website on GitHub Pages, keep `index.html` at repo root and configure:
+
+1. GitHub → **Settings** → **Pages**
+2. Source: **Deploy from branch**
+3. Branch: your main branch, folder: **/(root)**
+
+After saving, GitHub Pages serves the static landing form from `index.html`.
+
+
+## End-to-end automation after form submission
+
+The flow is now automated once a request is submitted from `index.html`:
+
+1. Form submits to `POST /api/submit-request`.
+2. Backend auto-matches providers from `backend/data/providers.json`.
+3. Request and job are logged to:
+   - `backend/data/requests-log.json`
+   - `backend/data/jobs-log.json`
+4. API returns:
+   - best provider + backup,
+   - WhatsApp-ready links for user and provider messages.
+
+### Run locally
+
+```bash
+cd backend && npm install && npm start
+# in another terminal from repo root:
+python -m http.server 8080
+```
+
+Then open `http://localhost:8080`.
+
+If backend is hosted elsewhere, set in browser console:
+
+```js
+localStorage.setItem('API_BASE', 'https://your-backend-url')
+```
+=======
+>>>>>>> main
