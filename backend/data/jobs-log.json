@@ -1,0 +1,13 @@
+[
+  {
+    "jobId": "J0001",
+    "requestId": "R0001",
+    "createdAt": "2026-04-27T06:25:56.109Z",
+    "recommendedProviderId": "P001",
+    "backupProviderId": "P002",
+    "quotedPriceRange": "£70-£130",
+    "status": "matched",
+    "userMessage": "Best option: QuickFix Plumbing, £70-£130, Same day. Reply YES to confirm.",
+    "providerMessage": "New lead: Plumbing in SW1A 1AA, urgency Immediate (same day). Customer contact: +447700001111."
+  }
+]
