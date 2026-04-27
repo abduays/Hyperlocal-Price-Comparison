@@ -1,5 +1,9 @@
 const express = require('express');
 const { matchProviders } = require('./matcher');
+<<<<<<< codex/build-hyperlocal-service-matching-tool
+const { processRequest } = require('./automation');
+=======
+>>>>>>> main
 
 const app = express();
 app.use(express.json());
@@ -17,6 +21,22 @@ app.post('/api/match', (req, res) => {
 
   const result = matchProviders(request, providers);
   return res.json(result);
+<<<<<<< codex/build-hyperlocal-service-matching-tool
+});
+
+app.post('/api/submit-request', (req, res) => {
+  const payload = req.body;
+  const required = ['serviceCategory', 'postcode', 'urgency', 'contactMethod', 'contactNumber'];
+  const missing = required.filter((field) => !payload[field]);
+
+  if (missing.length > 0) {
+    return res.status(400).json({ error: `Missing required fields: ${missing.join(', ')}` });
+  }
+
+  const result = processRequest(payload);
+  return res.json(result);
+=======
+>>>>>>> main
 });
 
 const port = process.env.PORT || 3000;
