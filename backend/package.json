@@ -4,7 +4,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+<<<<<<< codex/build-hyperlocal-service-matching-tool
+    "test": "node --check index.js && node --check matcher.js && node --check match-cli.js && node --check automation.js",
+=======
     "test": "node --check index.js && node --check matcher.js && node --check match-cli.js",
+>>>>>>> main
     "match": "node match-cli.js"
   },
   "dependencies": {
