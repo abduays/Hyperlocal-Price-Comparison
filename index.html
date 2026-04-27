@@ -123,6 +123,10 @@
           <button type="submit">Submit request</button>
           <div class="hint">For production: connect submit handler to your Google Form endpoint.</div>
           <div class="success" id="success-msg"></div>
+<<<<<<< codex/build-hyperlocal-service-matching-tool
+          <div class="success" id="result-msg" style="display:none;background:#eff6ff;color:#1e3a8a;border-color:#bfdbfe"></div>
+=======
+>>>>>>> main
         </form>
       </div>
     </main>
@@ -130,6 +134,58 @@
     <script>
       const form = document.getElementById('request-form');
       const success = document.getElementById('success-msg');
+<<<<<<< codex/build-hyperlocal-service-matching-tool
+      const resultBox = document.getElementById('result-msg');
+      const API_BASE = window.localStorage.getItem('API_BASE') || 'http://localhost:3000';
+
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const payload = {
+          serviceCategory: document.getElementById('service').value,
+          postcode: document.getElementById('postcode').value,
+          budgetMin: Number(document.getElementById('budgetMin').value || 0) || null,
+          budgetMax: Number(document.getElementById('budgetMax').value || 0) || null,
+          urgency: document.getElementById('urgency').value,
+          contactMethod: document.getElementById('contactMethod').value,
+          contactNumber: document.getElementById('phone').value,
+          problemDescription: document.getElementById('details').value
+        };
+
+        success.style.display = 'block';
+        success.textContent = 'Submitting and auto-matching now...';
+        resultBox.style.display = 'none';
+
+        try {
+          const response = await fetch(`${API_BASE}/api/submit-request`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+
+          const result = await response.json();
+          if (!response.ok) throw new Error(result.error || 'Submission failed');
+
+          success.textContent = `Request ${result.requestId} processed automatically.`;
+          resultBox.style.display = 'block';
+          if (result.recommendation) {
+            resultBox.innerHTML = [
+              `<strong>Recommended provider:</strong> ${result.recommendation.providerName}<br/>`,
+              `<strong>Price:</strong> £${result.recommendation.priceMin}-£${result.recommendation.priceMax}<br/>`,
+              `<strong>Availability:</strong> ${result.recommendation.availability}<br/>`,
+              `<a href="${result.notifications.userWhatsAppLink}" target="_blank" rel="noreferrer">Open user WhatsApp message</a><br/>`,
+              `<a href="${result.notifications.providerWhatsAppLink}" target="_blank" rel="noreferrer">Open provider WhatsApp message</a>`
+            ].join('');
+          } else {
+            resultBox.textContent = 'No instant match found. Request has been logged for fallback routing.';
+          }
+
+          form.reset();
+        } catch (error) {
+          success.textContent = `Automation failed: ${error.message}. Check backend and API_BASE.`;
+          resultBox.style.display = 'none';
+        }
+=======
 
       form.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -162,6 +218,7 @@
         console.log('WhatsApp-ready message', text);
 
         form.reset();
+>>>>>>> main
       });
     </script>
   </body>
